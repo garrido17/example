@@ -1,3 +1,4 @@
+// Autor: Carlos Mendoza
 #include <stdio.h>
 
 
