@@ -9,5 +9,6 @@ if (n==1){
     return n + suma(n-1);
 }
 int main(){
-    printf("Hola mundo");
+    printf("Hola mundo\n");
+    printf("Antar estuvo aquí\n");
 }
