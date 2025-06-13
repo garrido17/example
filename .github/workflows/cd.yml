@@ -1,0 +1,18 @@
+name: Liberación continua 
+on: 
+  release: 
+    types: created 
+permissions:
+  contents: write
+jobs: 
+   compilar-y-liberar: ubuntu-lastest
+   steps: 
+      - name: Clonar el repositorio
+        users: actions/checkout@v4
+      - name: Compilar código
+        run: gcc hola_mundo.c -o hola_mundo -O3
+      - name: Subir el ejecutable
+        users: svenstaro/upload-release-actions@v2
+        with:
+          file: hola_mundo
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
